@@ -10,7 +10,7 @@ describe('React Showcase SPA Lab', () => {
       </MemoryRouter>
     )
 
-    expect(screen.getByText(/Coffee R Us/i)).toBeInTheDocument()
+    expect(screen.getByText(/Lemon Aide Motors/i)).toBeInTheDocument()
     expect(screen.getByText(/Home/i)).toBeInTheDocument()
     expect(screen.getByText(/Catalog/i)).toBeInTheDocument()
     expect(screen.getByText(/Admin/i)).toBeInTheDocument()

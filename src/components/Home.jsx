@@ -1,8 +1,8 @@
 function Home() {
   return (
     <section className="hero-section">
-      <h1>Welcome to Coffee R Us</h1>
-      <p>Discover premium coffee products, learn about our shop, and manage inventory from the admin page.</p>
+      <h1>Welcome to Lemon Aide Motors</h1>
+      <p>Discover premium cars, learn about our showroom, and manage inventory from the admin page.</p>
     </section>
   );
 }

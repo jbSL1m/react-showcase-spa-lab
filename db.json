@@ -2,39 +2,46 @@
   "store_info": [
     {
       "id": "1",
-      "name": "Coffee R Us",
-      "description": "The go-to store for coffee lovers",
+      "name": "Lemon Aide Motors",
+      "description": "Your destination for quality cars and fast deals",
       "phone_number": "555-0123"
     }
   ],
-  "coffee": [
+  "cars": [
     {
       "id": "1",
-      "name": "Vanilla Bean",
-      "description": "Medium roast with sweet, nutty flavors",
-      "origin": "Colombia",
-      "price": 10
+      "name": "Tesla Model 3",
+      "description": "Electric compact sedan with high performance and advanced autopilot.",
+      "origin": "USA",
+      "price": 42990
     },
     {
       "id": "2",
-      "name": "House Blend",
-      "description": "Dark roast with rich caramel notes",
-      "origin": "Vietnam",
-      "price": 12
+      "name": "Toyota Camry",
+      "description": "Reliable midsize sedan with comfortable ride quality.",
+      "origin": "Japan",
+      "price": 26750
     },
     {
       "id": "3",
-      "name": "Ethiopian Light",
-      "description": "Bright citrus and floral aromas",
-      "origin": "Ethiopia",
-      "price": 14
+      "name": "Ford Mustang",
+      "description": "Iconic muscle car with a sporty V8 engine and classic styling.",
+      "origin": "USA",
+      "price": 55995
     },
     {
-      "name": "Cafe Bustelo",
-      "description": "Expresso style coffee inspired by the islands of the Caribbean",
-      "origin": "Cuba",
-      "price": 9.95,
-      "id": "ALXxS36uhE8"
+      "id": "4",
+      "name": "Volkswagen Golf",
+      "description": "Compact hatchback known for agile handling and efficient powertrains.",
+      "origin": "Germany",
+      "price": 23595
+    },
+    {
+      "name": "Chevrolet Malibu",
+      "description": "A practical and stylish family sedan featuring a spacious interior and user-friendly infotainment.",
+      "origin": "USA",
+      "price": 25000,
+      "id": "vPiKN3gbx5I"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

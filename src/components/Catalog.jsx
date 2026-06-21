@@ -1,15 +1,15 @@
 import useFetch from "../hooks/useFetch";
 
 function Catalog() {
-  const { data: coffeeItems, loading, error } = useFetch("http://localhost:6001/coffee");
+  const { data: carItems, loading, error } = useFetch("http://localhost:6001/cars");
 
   return (
     <section className="catalog-page">
-      <h2>Available Coffee</h2>
-      {loading && <p>Loading coffee catalog...</p>}
-      {error && <p>Unable to fetch coffee items.</p>}
+      <h2>Available Cars</h2>
+      {loading && <p>Loading car catalog...</p>}
+      {error && <p>Unable to fetch car items.</p>}
       <div className="card-grid">
-        {coffeeItems.map((item) => (
+        {carItems.map((item) => (
           <article key={item.id} className="card">
             <h3>{item.name}</h3>
             <p>{item.description}</p>

@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 
 function Admin() {
-  const [coffeeItems, setCoffeeItems] = useState([]);
+  const [carItems, setCarItems] = useState([]);
   const [formData, setFormData] = useState({ name: "", description: "", origin: "", price: "" });
   const [editingId, setEditingId] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:6001/coffee")
+    fetch("http://localhost:6001/cars")
       .then((r) => r.json())
-      .then((data) => setCoffeeItems(data));
+      .then((data) => setCarItems(data));
   }, []);
 
   function handleChange(event) {
@@ -32,26 +32,26 @@ function Admin() {
     };
 
     if (editingId) {
-      fetch(`http://localhost:6001/coffee/${editingId}`, {
+      fetch(`http://localhost:6001/cars/${editingId}`, {
         method: "PATCH",
         ...requestOptions,
       })
         .then((r) => r.json())
         .then((updated) => {
-          setCoffeeItems((current) => current.map((item) => (item.id === updated.id ? updated : item)));
+          setCarItems((current) => current.map((item) => (item.id === updated.id ? updated : item)));
           setEditingId(null);
           setFormData({ name: "", description: "", origin: "", price: "" });
         });
       return;
     }
 
-    fetch("http://localhost:6001/coffee", {
+    fetch("http://localhost:6001/cars", {
       method: "POST",
       ...requestOptions,
     })
       .then((r) => r.json())
       .then((created) => {
-        setCoffeeItems((current) => [...current, created]);
+        setCarItems((current) => [...current, created]);
         setFormData({ name: "", description: "", origin: "", price: "" });
       });
   }
@@ -93,11 +93,11 @@ function Admin() {
             required
           />
         </label>
-        <button type="submit">{editingId ? "Save Changes" : "Add Coffee"}</button>
+        <button type="submit">{editingId ? "Save Changes" : "Add Car"}</button>
       </form>
 
       <div className="card-grid">
-        {coffeeItems.map((item) => (
+        {carItems.map((item) => (
           <article key={item.id} className="card">
             <h3>{item.name}</h3>
             <p>{item.description}</p>
