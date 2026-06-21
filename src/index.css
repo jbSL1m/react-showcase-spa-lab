@@ -22,7 +22,7 @@ body {
 
 .site-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 2rem;
   padding: 1rem 1.25rem;
@@ -40,14 +40,15 @@ body {
   display: flex;
   gap: 1rem;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
 .site-nav .nav-links a {
   color: #1f2937;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.05rem;
 }
 
 .site-nav .nav-links a:hover {
@@ -62,6 +63,13 @@ body {
   border-radius: 1rem;
   box-shadow: 0 18px 35px -24px rgba(15, 23, 42, 0.35);
   margin-bottom: 2rem;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-section h1,
